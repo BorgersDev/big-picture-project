@@ -15,9 +15,9 @@
 /* MOBILE */
 @media (max-width: 576px){
   .bloco-cases{
-    margin-block: var(--space-sm);    /* 1.5 rem          */
+    margin: 0.9rem auto 1.5rem;
   }
   .bloco-cases img{
-    border-radius:16px;
+    border-radius:20px;
   }
 }

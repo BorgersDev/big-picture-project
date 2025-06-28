@@ -61,11 +61,11 @@ section:first-of-type {                /* logo + 1ª seção  */
 /*  MOBILE (≤576 px) – reduzimos os respiros  */
 @media (max-width: 576px) {
   main {
-    gap: var(--space-sm);              /* 1.5 rem           */
+    gap: 1rem;
     padding-bottom: var(--space-sm);
   }
 
   section {
-    padding-block: var(--space-sm);    /* 1.5 rem           */
+    padding-block: 0;
   }
 }
