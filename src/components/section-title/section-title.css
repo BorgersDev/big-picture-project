@@ -28,24 +28,23 @@
 }
 .label-pill {
   display: inline-block;
-  padding: 6px 10px;
+  padding: 10px 24px;
   font-size: calc(var(--fs-h2) + 5px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  border: 2px solid transparent;
-  background: var(--color-primary);   
-  color: var(--color-light);         
+  background: var(--color-primary);
+  color: var(--color-light);
   white-space: nowrap;
-   border-radius: 4px;
+  border-radius: 8px;
 }
 
 /* variações de cor */
-.section-title-wrapper.blue   .label-pill {
-  background: var(--color-primary);     
-  border-color: var(--color-primary);
-  border-radius: 6px;
+.section-title-wrapper.blue .label-pill {
+  background: #420faa;
+  color: #fff;
+  border: none;
 }
 
 .section-title-wrapper.orange .label-pill {
