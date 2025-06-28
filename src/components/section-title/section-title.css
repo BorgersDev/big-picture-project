@@ -1,0 +1,59 @@
+.section-title-wrapper {
+  /* centraliza no grid geral */
+  max-width: var(--max-width);
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.section-title-wrapper h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  white-space: nowrap;       /* título não quebra */
+}
+
+.section-title-wrapper .subtitle {
+  flex: 1 1 40ch;            /* grow, mínimo ~40 car. */
+  font-size: var(--fs-sub);
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 500px;
+}
+.label-pill {
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: 2px solid currentColor;
+  color: var(--color-light);      /* texto branco */
+  background: currentColor;       /* mesma cor da borda */
+  white-space: nowrap;
+}
+
+/* variações de cor */
+.section-title-wrapper.blue  .label-pill { color: var(--color-primary);  background: var(--color-primary); }
+.section-title-wrapper.orange .label-pill { color: var(--color-secondary); background: var(--color-secondary); }
+
+
+/* --- MOBILE (≤ 768 px) ------------------------------------------ */
+@media (max-width: 768px) {
+  .section-title-wrapper {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .section-title-wrapper h2 {
+    white-space: normal;     /* permite quebrar no mobile */
+  }
+}

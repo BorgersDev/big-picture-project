@@ -1,0 +1,49 @@
+/* --- Reset CSS rápido (Eric Meyer + ajustes) --- */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+
+:root {
+  /* cores do Design System */
+  --color-primary: #420faa;         /* roxo (títulos azuis)   */
+  --color-secondary: #e75f3a;       /* laranja (títulos)      */
+  --color-dark: #191a23;            /* texto/h2 escuro        */
+  --color-light: #ffffff;           /* texto claro / bg       */
+  --color-gray-light: #f8f8f8;      /* bg geral               */
+  --max-width: 1080px;              /* largura de container   */
+
+  /* escala de fontes */
+  --fs-h1: clamp(2.2rem, 4vw + 1rem, 3.5rem);
+  --fs-h2: 1.125rem;                /* ~18 px                 */
+  --fs-sub: 0.875rem;               /* ~14 px                 */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: var(--color-light);
+  color: var(--color-dark);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--color-text-secondary);
+}
+
+/* Facilita debug: */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

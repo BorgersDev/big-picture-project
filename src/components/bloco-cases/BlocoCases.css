@@ -1,0 +1,12 @@
+.bloco-cases {
+  margin: 3rem auto;          /* afasta do título e centraliza */
+  max-width: 1200px;          /* evita estourar em telas grandes */
+  padding: 0 1rem;            /* respiro lateral em mobile */
+}
+
+.bloco-cases img {
+  width: 100%;                /* preenche o container */
+  height: auto;
+  display: block;
+  border-radius: 24px;        /* mesmo raio do Figma */
+}
