@@ -25,11 +25,19 @@
 }
 
 /* MOBILE */
-@media (max-width: 576px){
-  .bloco-cases{
-    margin: 0.9rem auto 1.5rem;
+@media (max-width: 575px) {
+  .bloco-cases {
+    margin: 3rem auto 4rem;
+    width: calc(100% - 32px);
   }
-  .bloco-cases img{
-    border-radius:20px;
+
+  .cases-card {
+    border-radius: 32px;
+    padding: 2.25rem 1.5rem;
+  }
+
+  .bloco-cases img {
+    width: 100%;
+    border-radius: 32px;
   }
 }
