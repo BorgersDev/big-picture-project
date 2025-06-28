@@ -20,11 +20,21 @@
 }
 
 .section-title-wrapper .subtitle {
-  flex: 1 1 40ch;           
+  flex: 1 1 40ch;
   font-size: var(--fs-sub);
   font-weight: 400;
   line-height: 1.4;
   max-width: 500px;
+}
+
+@media (min-width: 769px) {
+  .section-title-wrapper .subtitle {
+    margin-left: 1rem;
+    max-width: 34ch;
+    display: inline-block;
+    transform: translateY(4px);
+    flex: 0 1 auto;
+  }
 }
 .label-pill {
   display: inline-block;
