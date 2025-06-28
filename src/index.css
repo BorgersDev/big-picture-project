@@ -58,16 +58,20 @@ img {
 @media (max-width: 576px) {
 
   /* 1 ▪ afasta menos as seções principais ----------------------- */
-  main            { gap: 1.2rem; }      /* antes 1.75-2rem */
+  main            { gap: 1rem; }
 
   /* 2 ▪ bloco TÍTULO + subtítulo ------------------------------- */
   .section-title-wrapper        { margin-bottom: 0.8rem; } /* cola no bloco roxo */
 
   .label-pill {
-    width: 100%;                  /* pílula ocupa a largura da arte     */
-    max-width: 320px;             /* …mas não estoura                   */
+    display: block;
+    width: 100%;
+    max-width: 320px;
     text-align: center;
     padding: 12px 20px;
+    border-radius: 14px;
+    white-space: normal;
+    line-height: 1.25;
   }
 
   .section-title-wrapper .subtitle {
@@ -77,7 +81,7 @@ img {
   }
 
   /* 3 ▪ bloco roxo (cards) logo depois do subtítulo ------------- */
-  .bloco-cases       { margin-top: 0.9rem; }  /* cola bem mais        */
+  .bloco-cases       { margin: 0.9rem auto 1.5rem; }
   .bloco-cases img   { border-radius: 20px; }
 
   /* 4 ▪ tira “buracos” extras causados por <section> ------------ */
