@@ -58,14 +58,13 @@ section:first-of-type {                /* logo + 1ª seção  */
   padding-block-start: 3.5rem;
 }
 
-/*  MOBILE (≤576 px) – reduzimos os respiros  */
-@media (max-width: 576px) {
-  main {
-    gap: 1rem;
-    padding-bottom: var(--space-sm);
+/*  MOBILE (≤575 px) – ajustes de espaçamento  */
+@media (max-width: 575px) {
+  section {
+    padding: 2.5rem 0 0;
   }
 
-  section {
-    padding-block: 0;
+  main {
+    gap: 3.5rem;
   }
 }
