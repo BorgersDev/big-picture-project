@@ -4,15 +4,7 @@
   padding: 2rem;
   text-align: center;
 }
-section {
-  max-width: 1280px;   /* largura limite da arte no Figma          */
-  margin: 0 auto;      /* centraliza tudo                           */
-  padding: 3rem 1rem;  /* espaçamento vertical (pode ir ajustando)  */
-}
 
-section:first-of-type {
-  padding-top: 2rem;   /* o título logo abaixo do header            */
-}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -51,6 +43,29 @@ section:first-of-type {
 main {
   display: flex;
   flex-direction: column;
-  gap: 4rem;            /* espaço entre seções principais */
-  padding-bottom: 6rem;
+  gap: var(--space-lg);        /* << usa var – desktop = 4rem */
+  padding-bottom: var(--space-lg);
+}
+
+/* cada seção já é centrada e tem espaçamento próprio */
+section {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: var(--space-md);      /* 3 rem desktop */
+}
+section:first-of-type {                /* logo + 1ª seção  */
+  padding-block-start: 2rem;
+}
+
+/*  MOBILE (≤576 px) – reduzimos os respiros  */
+@media (max-width: 576px) {
+  main {
+    gap: var(--space-sm);              /* 1.5 rem           */
+    padding-bottom: var(--space-sm);
+  }
+
+  section {
+    padding-block: var(--space-sm);    /* 1.5 rem           */
+  }
 }

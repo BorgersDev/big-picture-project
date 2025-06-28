@@ -1,14 +1,14 @@
-.section-title-wrapper {
-  /* centraliza no grid geral */
+.section-title-wrapper{
   max-width: var(--max-width);
-  margin: 0 auto 3rem;
+  margin-inline: auto;
+  margin-block-end: var(--space-md);  /* 3 rem desktop     */
+  margin: 2.5rem auto 1.75rem;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 1.5rem;
-  padding: 0 1rem;
+  padding-inline: 1rem;
 }
-
 .section-title-wrapper h2 {
   font-size: var(--fs-h2);
   font-weight: 700;
@@ -16,11 +16,11 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin: 0;
-  white-space: nowrap;       /* título não quebra */
+  white-space: nowrap;      
 }
 
 .section-title-wrapper .subtitle {
-  flex: 1 1 40ch;            /* grow, mínimo ~40 car. */
+  flex: 1 1 40ch;           
   font-size: var(--fs-sub);
   font-weight: 400;
   line-height: 1.4;
@@ -29,31 +29,51 @@
 .label-pill {
   display: inline-block;
   padding: 6px 10px;
-  font-size: var(--fs-h2);
+  font-size: calc(var(--fs-h2) + 5px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  border: 2px solid currentColor;
-  color: var(--color-light);      /* texto branco */
-  background: currentColor;       /* mesma cor da borda */
+  border: 2px solid transparent;
+  background: var(--color-primary);   
+  color: var(--color-light);         
   white-space: nowrap;
+   border-radius: 4px;
 }
 
 /* variações de cor */
-.section-title-wrapper.blue  .label-pill { color: var(--color-primary);  background: var(--color-primary); }
-.section-title-wrapper.orange .label-pill { color: var(--color-secondary); background: var(--color-secondary); }
+.section-title-wrapper.blue   .label-pill {
+  background: var(--color-primary);     
+  border-color: var(--color-primary);
+  border-radius: 6px;
+}
 
+.section-title-wrapper.orange .label-pill {
+  background: var(--color-secondary);
+  color: var(--color-dark);      /* agora o texto fica preto */
+}
 
-/* --- MOBILE (≤ 768 px) ------------------------------------------ */
-@media (max-width: 768px) {
-  .section-title-wrapper {
+/*  MOBILE  */
+@media (max-width: 576px) {
+  .section-title-wrapper{
     flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 2rem;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;  
+    margin: 2rem auto 1.25rem; 
+    margin-block-end: var(--space-sm);   /* 1.5 rem */
   }
 
-  .section-title-wrapper h2 {
-    white-space: normal;     /* permite quebrar no mobile */
+  .label-pill{
+    padding: 10px 18px;
+    font-size: 1rem;
+    white-space: normal;                 /* quebra em 2 linhas */
+    line-height: 1.25;
+    border-radius: 8px;
+  }
+
+  .section-title-wrapper .subtitle {
+    max-width: 24ch;
+    margin: 0.4rem auto 0;       /* perto do título                     */
   }
 }

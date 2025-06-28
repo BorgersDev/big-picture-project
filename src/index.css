@@ -15,6 +15,10 @@
   --fs-h1: clamp(2.2rem, 4vw + 1rem, 3.5rem);
   --fs-h2: 1.125rem;                /* ~18 px                 */
   --fs-sub: 0.875rem;               /* ~14 px                 */
+  
+  --space-lg: 1rem;     /* usado no desktop                     */
+  --space-md: 0.75rem;
+  --space-sm: 0.5rem;   
 }
 
 html,
@@ -46,4 +50,36 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+/* -----------------------------------------------------------------
+   AJUSTE FINO MOBILE (≤ 576 px)  – cola tudo e sobrescreve o mínimo
+   -----------------------------------------------------------------*/
+@media (max-width: 576px) {
+
+  /* 1 ▪ afasta menos as seções principais ----------------------- */
+  main            { gap: 1.2rem; }      /* antes 1.75-2rem */
+
+  /* 2 ▪ bloco TÍTULO + subtítulo ------------------------------- */
+  .section-title-wrapper        { margin-bottom: 0.8rem; } /* cola no bloco roxo */
+
+  .label-pill {
+    width: 100%;                  /* pílula ocupa a largura da arte     */
+    max-width: 320px;             /* …mas não estoura                   */
+    text-align: center;
+    padding: 12px 20px;
+  }
+
+  .section-title-wrapper .subtitle {
+    margin: 0.4rem auto 0;        /* ∴ subtítulo logo abaixo            */
+    max-width: 30ch;
+    line-height: 1.4;
+  }
+
+  /* 3 ▪ bloco roxo (cards) logo depois do subtítulo ------------- */
+  .bloco-cases       { margin-top: 0.9rem; }  /* cola bem mais        */
+  .bloco-cases img   { border-radius: 20px; }
+
+  /* 4 ▪ tira “buracos” extras causados por <section> ------------ */
+  section { padding: 0; }          /* nada de padding vertical nativo   */
 }

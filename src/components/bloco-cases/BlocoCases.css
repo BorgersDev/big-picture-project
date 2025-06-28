@@ -1,12 +1,23 @@
-.bloco-cases {
-  margin: 3rem auto;          /* afasta do título e centraliza */
-  max-width: 1200px;          /* evita estourar em telas grandes */
-  padding: 0 1rem;            /* respiro lateral em mobile */
+.bloco-cases{
+  margin-block: var(--space-md);      /* 3 rem desktop   */
+  max-width: 1200px;
+  padding-inline: 1rem;
+  margin: 1.5rem auto 1.75rem;
 }
 
-.bloco-cases img {
-  width: 100%;                /* preenche o container */
-  height: auto;
-  display: block;
-  border-radius: 24px;        /* mesmo raio do Figma */
+.bloco-cases img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:24px;
+}
+
+/* MOBILE */
+@media (max-width: 576px){
+  .bloco-cases{
+    margin-block: var(--space-sm);    /* 1.5 rem          */
+  }
+  .bloco-cases img{
+    border-radius:16px;
+  }
 }

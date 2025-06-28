@@ -14,7 +14,10 @@ const SectionTitle: React.FC<SectionTitleProps> = ({
   subtitle,
 }) => (
   <div className={`section-title-wrapper ${color}`}>
-    <span className="label-pill">{title}</span>
+    {/* título / pílula */}
+    <h2 className="label-pill">{title}</h2>
+
+    {/* texto auxiliar */}
     <p className="subtitle">{subtitle}</p>
   </div>
 );
