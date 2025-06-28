@@ -43,7 +43,7 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);        /* << usa var – desktop = 4rem */
+  gap: 2rem;
   padding-bottom: var(--space-lg);
 }
 
@@ -55,7 +55,7 @@ section {
   padding-block: var(--space-md);      /* 3 rem desktop */
 }
 section:first-of-type {                /* logo + 1ª seção  */
-  padding-block-start: 2rem;
+  padding-block-start: 3.5rem;
 }
 
 /*  MOBILE (≤576 px) – reduzimos os respiros  */
